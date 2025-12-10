@@ -1,0 +1,180 @@
+.detail-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.detail-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #4CAF50;
+}
+
+.detail-title {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.submission-time {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.detail-section {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #4CAF50;
+}
+
+.section-title {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-title::before {
+  content: "📋";
+  font-size: 1.2rem;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.detail-label {
+  font-weight: bold;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.detail-value {
+  color: #333;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.about-content {
+  background: white;
+  padding: 1rem;
+  border-radius: 6px;
+  line-height: 1.6;
+}
+
+.file-info {
+  background: white;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.file-info p {
+  margin: 0;
+  padding: 0.5rem;
+  background: #e8f5e9;
+  border-radius: 4px;
+}
+
+.detail-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.action-btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+}
+
+.back-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.back-btn:hover {
+  background: #5a6268;
+}
+
+.save-btn {
+  background: #28a745;
+  color: white;
+}
+
+.save-btn:hover {
+  background: #218838;
+}
+
+.print-btn {
+  background: #17a2b8;
+  color: white;
+}
+
+.print-btn:hover {
+  background: #138496;
+}
+
+/* Print styles */
+@media print {
+  .detail-actions {
+    display: none;
+  }
+  
+  .detail-page {
+    box-shadow: none;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .detail-page {
+    padding: 1rem;
+  }
+  
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .detail-actions {
+    flex-direction: column;
+  }
+  
+  .action-btn {
+    justify-content: center;
+  }
+}

@@ -11,6 +11,7 @@ const FormComponent = ({ onSubmit }) => {
     subjects: [],
     resume: null,
     url: '',
+    position: '',
     choice: '',
     about: ''
   });
@@ -55,6 +56,7 @@ const FormComponent = ({ onSubmit }) => {
       subjects: [],
       resume: null,
       url: '',
+      position: '',
       choice: '',
       about: ''
     });
@@ -65,6 +67,7 @@ const FormComponent = ({ onSubmit }) => {
       <h1 className="form-title">Form in React</h1>
       
       <form onSubmit={handleSubmit}>
+        {/* First Name */}
         <div className="form-group">
           <label className="form-label">
             <strong>First Name*</strong>
@@ -80,6 +83,7 @@ const FormComponent = ({ onSubmit }) => {
           />
         </div>
 
+        {/* Last Name */}
         <div className="form-group">
           <label className="form-label">
             <strong>Last Name*</strong>
@@ -95,6 +99,7 @@ const FormComponent = ({ onSubmit }) => {
           />
         </div>
 
+        {/* Email */}
         <div className="form-group">
           <label className="form-label">
             <strong>Enter Email*</strong>
@@ -110,6 +115,7 @@ const FormComponent = ({ onSubmit }) => {
           />
         </div>
 
+        {/* Contact */}
         <div className="form-group">
           <label className="form-label">
             <strong>Contact*</strong>
@@ -125,6 +131,7 @@ const FormComponent = ({ onSubmit }) => {
           />
         </div>
 
+        {/* Gender */}
         <div className="form-group">
           <label className="form-label">
             <strong>Gender*</strong>
@@ -146,6 +153,7 @@ const FormComponent = ({ onSubmit }) => {
           </div>
         </div>
 
+        {/* Best Subject */}
         <div className="form-group">
           <label className="form-label">
             <strong>Your best Subject</strong>
@@ -166,6 +174,7 @@ const FormComponent = ({ onSubmit }) => {
           </div>
         </div>
 
+        {/* Upload Resume */}
         <div className="form-group">
           <label className="form-label">
             <strong>Upload Resume*</strong>
@@ -179,6 +188,7 @@ const FormComponent = ({ onSubmit }) => {
           />
         </div>
 
+        {/* URL */}
         <div className="form-group">
           <label className="form-label">
             <strong>Enter URL*</strong>
@@ -194,6 +204,22 @@ const FormComponent = ({ onSubmit }) => {
           />
         </div>
 
+        {/* Position */}
+        <div className="form-group">
+          <label className="form-label">
+            <strong>Position/Role</strong>
+          </label>
+          <input
+            type="text"
+            name="position"
+            value={formData.position}
+            onChange={handleChange}
+            placeholder="Enter your position/role"
+            className="form-input"
+          />
+        </div>
+
+        {/* Select Choice */}
         <div className="form-group">
           <label className="form-label">
             <strong>Select your choice</strong>
@@ -211,6 +237,7 @@ const FormComponent = ({ onSubmit }) => {
           </select>
         </div>
 
+        {/* About */}
         <div className="form-group">
           <label className="form-label">
             <strong>About</strong>
@@ -225,12 +252,13 @@ const FormComponent = ({ onSubmit }) => {
           />
         </div>
 
+        {/* Buttons */}
         <div className="form-buttons">
           <button type="button" onClick={handleReset} className="btn reset-btn">
             Reset
           </button>
           <button type="submit" className="btn submit-btn">
-            Submit
+            📤 Submit & View Details
           </button>
         </div>
       </form>

@@ -150,6 +150,7 @@
   background: #45a049;
 }
 
+/* Required field indicator */
 .form-label strong::after {
   content: "*";
   color: #ff4444;
